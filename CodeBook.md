@@ -1,7 +1,8 @@
-#Getting-and-Cleaning-Data---Peer-Assessment
-#====================================
-
 ##Code Book
+##-------------
+
+###Mark Kinsky
+###Getting and Cleaning Data - April 2014 - Signature Track
 
 This code book will accomplish the following goals:
 
@@ -31,15 +32,16 @@ The goal of the assessment was to perform the following tasks:
 *  Extracts only the measurements on the mean and standard deviation for each measurement. 
 *  Uses descriptive activity names to name the activities in the data set
 *  Appropriately labels the data set with descriptive activity names. 
-*  Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+*  Create a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
-In order to accomplish these tasks, the "run_analysis.R" script was created.  Each transformation I performed has been commented in the script and can be traced back to one or more of the afor
-
+In order to accomplish these tasks, the "run_analysis.R" script was created.  Each transformation performed is commented in the script and can be traced back to one or more of the aforementioned assessment tasks.  Two important points must be addressed when reviewing the script:
+*  In order to execute the script, the working directory must be updated to reflect the location of the Samsung data files
+*  When extracting "...only the measurements on the mean and standard deviation for each measurement", this phrase was intrepreted as only extract those columns with the literals "mean()" or "std()" somewhere in column heading.  Therefore, column headings containing the literal "meanFreq" were omitted from the tidyData.txt.
 
 ###3.  Describe each variable in tidyData.txt file
 The tidyData.txt file is comprised of the following columns:
 * subject - This is an unique number associated with each test subject
 * activity.id - This is an unique number associated with a given experimental activity
-* activity - The textual description associated with the given activity.id
-* variable - A particular measurement made on the subject when performing the given activity.  As illustrated in the dataset, there are numerous measurements made on each subject when performing each given activity.  
-* average - The
+* activity - The textual description of the associated given activity
+* variable - A particular trial measurement.  As illustrated in the dataset, there are numerous measurements made on each subject when performing each given activity.  
+* average - The average of each trial conducted across each subject when performing each activity.

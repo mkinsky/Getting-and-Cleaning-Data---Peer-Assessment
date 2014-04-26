@@ -1,7 +1,6 @@
-#Getting-and-Cleaning-Data---Peer-Assessment
-#====================================
-
 ##README
+##-----------
+
 ###Mark Kinsky
 ###Getting and Cleaning Data - April 2014 - Signature Track
 

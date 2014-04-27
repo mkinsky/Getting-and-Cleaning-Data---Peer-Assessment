@@ -1,16 +1,14 @@
-###Getting and Cleaning Data - April 2014 - Signature Track
-
 This code book will accomplish the following goals:
 
 1.  Describe the raw data, at a high-level
-2.  Transformations used to take the raw data and produce the tidyData.txt
+2.  Mention the transformations used to take the raw data and produce the tidyData.txt
 3.  Describe each variable in tidyData.txt file
 
 
 ###1.  Describe the raw data, at a high-level
 As described in (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones), the Human Activity Recognition Using Smartphones Data Set contains "...measurements from experiments carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data."
 
-In total, 10,299 trial runs were carried out across the 30 test subjects performing the 6 activities.  In each trial run, 561 separate measurements were recorded.  The resulting data were stored as follows:
+In total, 10,299 trial runs were carried out across the 30 test subjects performing the 6 activities.  In each trial run, 561 separate measurements were recorded.  The resulting data were stored in the following files:
 
 * 'features_info.txt': Describes the 561 measurement variables
 * 'features.txt': List of all measurements taken
@@ -21,18 +19,17 @@ In total, 10,299 trial runs were carried out across the 30 test subjects perform
 * 'test/y_test.txt': The activity performed by each subject in the X_test.txt data set
 
 ###2.  Transformations used to take the raw data and produce the tidyData.txt
-
 The goal of the assessment was to perform the following tasks:
-*  Create one R script called run_analysis.R that does the following. 
+*  Create one R script called run_analysis.R that does the following:
 *  Merges the training and the test sets to create one data set.
 *  Extracts only the measurements on the mean and standard deviation for each measurement. 
 *  Uses descriptive activity names to name the activities in the data set
 *  Appropriately labels the data set with descriptive activity names. 
-*  Create a second, independent tidy data set with the average of each variable for each activity and each subject. 
+*  Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
-In order to accomplish these tasks, the "run_analysis.R" script was created.  Each transformation performed is commented in the script and can be traced back to one or more of the aforementioned assessment tasks.  Two important points must be addressed when reviewing the script:
-*  In order to execute the script, the working directory must be updated to reflect the location of the Samsung data files
-*  When extracting "...only the measurements on the mean and standard deviation for each measurement", this phrase was intrepreted as only extract those columns with the literals "mean()" or "std()" somewhere in column heading.  Therefore, column headings containing the literal "meanFreq" were omitted from the tidyData.txt.
+In order to accomplish these tasks, the "run_analysis.R" script was created.  Each transformation performed is commented in the script and can be traced back to one or more of the aforementioned assessment tasks.  Two important points must be addressed when reviewing the R script:
+*  In order to execute the R script, the working directory must be updated to reflect the location of the Samsung data files
+*  When extracting "...only the measurements on the mean and standard deviation for each measurement", this phrase was interpreted as only extract those columns with the literals "mean()" or "std()" somewhere in column heading.  Therefore, column headings containing the literal "meanFreq" were omitted from the tidyData.txt.
 
 ###3.  Describe each variable in tidyData.txt file
 The tidyData.txt file is comprised of the following columns:

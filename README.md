@@ -1,7 +1,3 @@
-##README
-##-----------
-
-###Mark Kinsky
 ###Getting and Cleaning Data - April 2014 - Signature Track
 
 The goal of the repository is to be a central warehouse for all files related to the Coursera "Getting and Cleaning Data" class's peer assesment assignment due on 27 April 2014.  The assignment's goal is to take a wearable computing machine learning dataset (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and perform the following actions on the dataset:

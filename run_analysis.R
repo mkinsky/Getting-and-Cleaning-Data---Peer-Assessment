@@ -47,7 +47,7 @@ measurement.data.frame <- as.data.frame(combined.data.frame[, column.matches[,1]
 measurement.data.frame <- merge(x = activity, y = measurement.data.frame, by = "activity.id")
 measurement.data.frame <- measurement.data.frame[, c(3, 1:2, 4:69)] #reorder columns
 
-#Part 5 - Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+#Part 5 - Create a second, independent tidy data set with the average of each variable for each activity and each subject. 
 melted.data.frame <- melt(measurement.data.frame, id=c("subject", "activity.id", "activity"))
 id.variables <- c("subject", "activity.id", "activity", "variable")
 measurement.data.table <- data.table(melted.data.frame)

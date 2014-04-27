@@ -1,7 +1,3 @@
-##Code Book
-##-------------
-
-###Mark Kinsky
 ###Getting and Cleaning Data - April 2014 - Signature Track
 
 This code book will accomplish the following goals:
